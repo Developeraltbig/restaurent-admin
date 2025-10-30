@@ -1,0 +1,59 @@
+<!-- frontend/index.html -->
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Courtyard Diaries</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font for Main App -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- Fonts for Admin Panel -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- 1. Tailwind Play CDN script with required plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- 2. Your Admin Panel Configuration -->
+    <script id="tailwind-config-admin">
+      tailwind.config = {
+        important: '#admin-panel', // This ensures admin styles override main styles
+        
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#27AE60",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112111",
+              "content-light": "#ffffff",
+              "content-dark": "#1A2E1A",
+              "text-light-primary": "#112111",
+              "text-dark-primary": "#f6f8f6",
+              "text-light-secondary": "#4A5568",
+              "text-dark-secondary": "#A0AEC0",
+              "border-light": "#E2E8F0",
+              "border-dark": "#2D3748",
+              "accent": "#F5A623",
+              "success": "#27AE60",
+              "danger": "#E53E3E",
+            },
+            fontFamily: {
+              "display": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

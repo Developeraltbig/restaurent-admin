@@ -1,0 +1,101 @@
+[
+  {
+    "category": "Appetizers",
+    "items": [
+      {
+        "id": 101,
+        "name": "Bruschetta",
+        "description": "Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil.",
+        "price": 12.50,
+        "image": "https://images.unsplash.com/photo-1579631542720-3a8782417445?q=80&w=1974&auto=format&fit=crop"
+      },
+      {
+        "id": 102,
+        "name": "Calamari Fritti",
+        "description": "Lightly battered and fried squid served with a spicy marinara sauce.",
+        "price": 15.00,
+        "image": "https://images.unsplash.com/photo-1625944022823-38c4d51b54c8?q=80&w=2070&auto=format&fit=crop"
+      },
+      {
+        "id": 103,
+        "name": "Stuffed Mushrooms",
+        "description": "Mushrooms filled with breadcrumbs, herbs, and Parmesan cheese.",
+        "price": 14.00,
+        "image": "https://images.unsplash.com/photo-1626997971465-252a22c59a35?q=80&w=2012&auto=format&fit=crop"
+      },
+      {
+        "id": 104,
+        "name": "Caprese Salad",
+        "description": "Fresh mozzarella, tomatoes, and sweet basil, seasoned with salt and olive oil.",
+        "price": 13.75,
+        "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?q=80&w=1941&auto=format&fit=crop"
+      }
+    ]
+  },
+  {
+    "category": "Main Course",
+    "items": [
+      {
+        "id": 201,
+        "name": "Golden Risotto",
+        "description": "Creamy risotto with saffron and parmesan cheese.",
+        "price": 28.50,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpvYRgEmnOfecSWNJjEbcJOjBo9WXbc8JCJqrVVfkJ_nq6JZcOa-SDmKLDVY0Nlv6GPmWobmhLqinvRDGbHufRaNueRf-HupjXgjlepK3P9vR7s5ubbUFJRIGGgx6KgEXakoAW72ID2qCyFdKKmA4hatGryyHDXDqJqx7Apb-ZDj6bWIJ3VBOOZTJuFmmTomgePwl28JOARwKpm97TFKY03noSAB9SEPuA0ZWuoZ-WfBSK0Ef1XBYnCB5LxRQxn5wH2cua3zYTSB8"
+      },
+      {
+        "id": 202,
+        "name": "Black Truffle Pasta",
+        "description": "Handmade pasta with a rich black truffle sauce and shaved truffle.",
+        "price": 35.00,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuACeUWeDC-olW40WYw125Dg3CiYGOk1-2BaEmM5ALXWgDS5_bDtmaAxnWuvyFJ36_Jbwnj0hB7ZzWaf_faXo8aX9hRks8apTIAbiY0rAcy72f1SuGufspAf6gG6k3t7hlXDM_cI95XQIbUTKfW7cn-8KbVucWaOQ1kmmDpYYCp2PFHkkiBhTloegKAp39kuWn3KR-WoKDkCFEKgdDfx5xXfBvPd5O31x95zt16PhOHCXyV2eSHCATwuSoGCSYz7sCG5gTgTmj8Z0lk"
+      },
+      {
+        "id": 203,
+        "name": "Seared Scallops",
+        "description": "Perfectly seared scallops on a bed of greens with a lemon butter sauce.",
+        "price": 32.75,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAS-fnxZg04I4J9n-rFi4THzdCCwD4p3eYotAYO_7v4B19A_AIl4iodlY8Gw3xly6arbFzYp-CXa6SUV9e6yUaUWf9S6LfxTiuuE5ihs1YkjCHkY08U5wYNjzr2tXBoMGrU2uEXr4Ku5ZORoKGZ8jNSQwIrBxpqlLNGfBrODfvZ7kUGUOEs5phO5oK3zF5YT1HEpHjvvb69NsrE21V6DthRvQD4o4hyMXd5dLiTtYzL_xs-i2smsl_s6rZK6X2E-W5i27hC9UmfY-c"
+      },
+      {
+        "id": 204,
+        "name": "Filet Mignon",
+        "description": "8oz center-cut filet, grilled to perfection, served with asparagus.",
+        "price": 55.00,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBUhqqyhB6Kqph2ZIEivCN5PM8YGXl50xkJv2H5yr93K5KshE6Avt_VBxDOtd_1wIn6kkwhXopuVdXgo7RyIacifqmy5Gcn8w66su6cMu7KADUx4bymhzxnRNrmMhySLHgknUDi7-2mMorlWeKOe7a4ppd3zZxnFeKtG9I5YnKmwzvE78JyMjLYl1cK7H7hMoe4Fu4ImyoJTrxj1deKhF1RAOUjg64rrSuIJvShDr1keiU_EzaEmLK4wr9JtP_4uDHwFKoGXlVmXyQ"
+      }
+    ]
+  },
+  {
+    "category": "Desserts",
+    "items": [
+      {
+        "id": 301,
+        "name": "Tiramisu",
+        "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone.",
+        "price": 11.00,
+        "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=2072&auto=format&fit=crop"
+      },
+      {
+        "id": 302,
+        "name": "Panna Cotta",
+        "description": "Silky smooth Italian custard served with a berry coulis.",
+        "price": 10.50,
+        "image": "https://images.unsplash.com/photo-1615485217319-3990842d334f?q=80&w=1964&auto=format&fit=crop"
+      },
+      {
+        "id": 303,
+        "name": "Chocolate Lava Cake",
+        "description": "Warm chocolate cake with a gooey molten center, served with vanilla ice cream.",
+        "price": 12.00,
+        "image": "https://images.unsplash.com/photo-1586985289936-e04c0703c19e?q=80&w=1974&auto=format&fit=crop"
+      },
+      {
+        "id": 304,
+        "name": "Gelato",
+        "description": "A scoop of authentic Italian ice cream. Ask for today's flavors.",
+        "price": 8.00,
+        "image": "https://images.unsplash.com/photo-1627222239924-a690729de0d0?q=80&w=1964&auto=format&fit=crop"
+      }
+    ]
+  }
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gourmet Grove - Admin Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#28a745",
+            "background-light": "#F8F9FA",
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            display: ["Sora", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body class="h-full font-display bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100">
+<div class="flex min-h-full flex-col justify-center items-center px-6 py-12 lg:px-8">
+<div class="sm:mx-auto sm:w-full sm:max-w-md">
+<div class="flex items-center justify-center gap-3">
+<div class="bg-primary p-3 rounded-lg">
+<svg class="feather feather-utensils-crossed" fill="none" height="28" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 2 L21 7 L16 12"></path>
+<path d="M8 2 L3 7 L8 12"></path>
+<line x1="12" x2="12" y1="22" y2="12"></line>
+<line x1="3" x2="21" y1="15" y2="15"></line>
+</svg>
+</div>
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Gourmet Grove</h1>
+</div>
+<h2 class="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-white">Sign in to your account</h2>
+<p class="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">Admin Panel</p>
+</div>
+<div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+<div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-8">
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="block text-sm font-medium leading-6 text-gray-700 dark:text-gray-300" for="email">Username or Email</label>
+<div class="mt-2">
+<input autocomplete="email" class="block w-full rounded-md border-0 py-2.5 px-3 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" id="email" name="email" required="" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between">
+<label class="block text-sm font-medium leading-6 text-gray-700 dark:text-gray-300" for="password">Password</label>
+</div>
+<div class="mt-2">
+<input autocomplete="current-password" class="block w-full rounded-md border-0 py-2.5 px-3 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" id="password" name="password" required="" type="password"/>
+</div>
+</div>
+<div>
+<button class="flex w-full justify-center rounded-md bg-primary px-3 py-2.5 text-sm font-semibold leading-6 text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-opacity" type="submit">Login</button>
+</div>
+</form>
+</div>
+<p class="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
+<a class="font-semibold leading-6 text-primary hover:text-opacity-80 transition-opacity" href="#">Forgot Password?</a>
+</p>
+</div>
+</div>
+
+</body></html>

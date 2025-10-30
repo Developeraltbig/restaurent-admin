@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Admin - Menu Management</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "primary": "#27AE60", "background-light": "#f6f8f6", "background-dark": "#112111", "content-light": "#ffffff", "content-dark": "#1A2E1A", "text-light-primary": "#112111", "text-dark-primary": "#f6f8f6", "text-light-secondary": "#4A5568", "text-dark-secondary": "#A0AEC0", "border-light": "#E2E8F0", "border-dark": "#2D3748", "accent": "#F5A623", "success": "#27AE60", "danger": "#E53E3E", },
+                    fontFamily: { "display": ["Work Sans", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light-primary dark:text-dark-primary">
+    <div class="flex h-screen">
+        <!-- SideNavBar -->
+        <aside class="flex h-full w-64 flex-col border-r border-border-light dark:border-border-dark bg-content-light dark:bg-content-dark p-4">
+            <div class="flex items-center gap-3 p-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+                    <span class="material-symbols-outlined text-2xl">restaurant_menu</span>
+                </div>
+                <div class="flex flex-col">
+                    <h1 class="text-lg font-bold text-text-light-primary dark:text-dark-primary">Gourmet Grove</h1>
+                    <p class="text-sm font-normal text-text-light-secondary dark:text-dark-secondary">Admin Panel</p>
+                </div>
+            </div>
+            <nav class="mt-8 flex flex-1 flex-col justify-between">
+                <div class="flex flex-col gap-2">
+                    <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="/admin/dashboard.html">
+                        <span class="material-symbols-outlined text-2xl">dashboard</span>
+                        <p class="text-sm font-medium">Dashboard</p>
+                    </a>
+                    <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="/admin/orders.html">
+                        <span class="material-symbols-outlined text-2xl">receipt_long</span>
+                        <p class="text-sm font-medium">Orders</p>
+                    </a>
+                    <a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2 text-primary" href="#">
+                        <span class="material-symbols-outlined text-2xl">restaurant</span>
+                        <p class="text-sm font-medium">Menu</p>
+                    </a>
+                    <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="#">
+                        <span class="material-symbols-outlined text-2xl">group</span>
+                        <p class="text-sm font-medium">Customers</p>
+                    </a>
+                    <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="#">
+                        <span class="material-symbols-outlined text-2xl">bar_chart</span>
+                        <p class="text-sm font-medium">Analytics</p>
+                    </a>
+                    <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="#">
+                        <span class="material-symbols-outlined text-2xl">settings</span>
+                        <p class="text-sm font-medium">Settings</p>
+                    </a>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="#">
+                        <span class="material-symbols-outlined text-2xl">logout</span>
+                        <p class="text-sm font-medium">Log Out</p>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex flex-1 flex-col overflow-y-auto">
+            <!-- TopNavBar -->
+            <header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-border-light dark:border-border-dark bg-content-light/80 px-8 py-3 backdrop-blur-sm dark:bg-content-dark/80">
+                <div class="flex items-center gap-8">
+                    <h1 class="text-xl font-bold">Menu Management</h1>
+                </div>
+                <div class="flex flex-1 items-center justify-end gap-6">
+                    <button class="relative flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light text-text-light-secondary hover:bg-primary/10 dark:bg-background-dark dark:text-dark-secondary dark:hover:bg-primary/20">
+                        <span class="material-symbols-outlined text-2xl">notifications</span>
+                        <span class="absolute right-2.5 top-2.5 flex h-2.5 w-2.5 items-center justify-center rounded-full bg-accent text-xs text-white"></span>
+                    </button>
+                    <div class="h-10 w-10 rounded-full bg-cover bg-center bg-no-repeat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlhw9FDGZ6k30Lx1BFFqHzxtBoprn0EmEcOOEdcdB4Ads0S4Agah82ymPAvcGjFZOAtFV9SQcngoT4YAmxuZe0wEkKEMfm0mmVmb8yXheyfzmBmljmBoH9UqZAdgMrv-7sXVv0BqAOW2W7wchLn0nd6Uy97VDspaKz11YEVpl0Z5i3qLo5XJuRNTlYOViS0Q4LcNoaEIs-v-icGD1KSTDE7oF0YfUZpQl1Pa8zXEW9vmFc4-lqay8OkCDm2Aqa9O-sQArbvY52UVg");'></div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 p-8">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+
+                    <!-- Add Category Section -->
+                    <div class="flex flex-col gap-6 rounded-xl border border-border-light bg-content-light p-6 dark:border-border-dark dark:bg-content-dark">
+                        <h3 class="text-lg font-semibold text-text-light-primary dark:text-dark-primary">Manage Categories</h3>
+                        <form class="flex flex-col gap-4">
+                            <div>
+                                <label for="categoryName" class="mb-2 block text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Add New Category</label>
+                                <input type="text" id="categoryName" class="form-input w-full rounded-lg border-border-light bg-background-light text-sm text-text-light-primary placeholder:text-text-light-secondary focus:border-primary focus:ring-1 focus:ring-primary dark:border-border-dark dark:bg-background-dark dark:text-dark-primary dark:placeholder:text-dark-secondary" placeholder="e.g., Appetizers">
+                            </div>
+                            <button type="submit" class="flex h-10 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary text-sm font-bold text-white shadow-sm hover:bg-primary/90">
+                                <span class="truncate">Add Category</span>
+                            </button>
+                        </form>
+                        <div class="my-2 border-t border-border-light dark:border-border-dark"></div>
+                        <div>
+                            <h4 class="mb-4 text-base font-semibold text-text-light-primary dark:text-dark-primary">Existing Categories</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-center justify-between rounded-lg bg-background-light p-3 dark:bg-background-dark">
+                                    <span class="text-sm font-medium">Main Course</span>
+                                    <button class="text-danger"><span class="material-symbols-outlined text-xl">delete</span></button>
+                                </li>
+                                <li class="flex items-center justify-between rounded-lg bg-background-light p-3 dark:bg-background-dark">
+                                    <span class="text-sm font-medium">Desserts</span>
+                                    <button class="text-danger"><span class="material-symbols-outlined text-xl">delete</span></button>
+                                </li>
+                                <li class="flex items-center justify-between rounded-lg bg-background-light p-3 dark:bg-background-dark">
+                                    <span class="text-sm font-medium">Beverages</span>
+                                    <button class="text-danger"><span class="material-symbols-outlined text-xl">delete</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Upload Item Section -->
+                    <div class="flex flex-col gap-6 rounded-xl border border-border-light bg-content-light p-6 dark:border-border-dark dark:bg-content-dark">
+                        <h3 class="text-lg font-semibold text-text-light-primary dark:text-dark-primary">Upload New Menu Item</h3>
+                        <form class="flex flex-col gap-4">
+                            <div>
+                                <label for="itemId" class="mb-2 block text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Item ID</label>
+                                <input type="text" id="itemId" class="form-input w-full rounded-lg border-border-light bg-background-light text-sm" placeholder="e.g., 201">
+                            </div>
+                            <div>
+                                <label for="itemCategory" class="mb-2 block text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Category</label>
+                                <select id="itemCategory" class="form-select w-full rounded-lg border-border-light bg-background-light text-sm">
+                                    <option>Select a category</option>
+                                    <option>Main Course</option>
+                                    <option>Desserts</option>
+                                    <option>Beverages</option>
+                                </select>
+                            </div>
+                             <div>
+                                <label for="dishName" class="mb-2 block text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Dish Name</label>
+                                <input type="text" id="dishName" class="form-input w-full rounded-lg border-border-light bg-background-light text-sm" placeholder="e.g., Black Truffle Pasta">
+                            </div>
+                            <div>
+                                <label for="description" class="mb-2 block text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Description</label>
+                                <textarea id="description" rows="3" class="form-textarea w-full rounded-lg border-border-light bg-background-light text-sm" placeholder="A short description of the dish..."></textarea>
+                            </div>
+                            <div>
+                                <label for="price" class="mb-2 block text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Price</label>
+                                <div class="relative">
+                                    <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-text-light-secondary dark:text-dark-secondary">$</span>
+                                    <input type="number" id="price" class="form-input w-full rounded-lg border-border-light bg-background-light pl-7 text-sm" placeholder="0.00" step="0.01">
+                                </div>
+                            </div>
+                             <div>
+                                <label class="mb-2 block text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Image</label>
+                                <label for="imageUpload" class="flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-dashed border-border-light bg-background-light p-6 text-center hover:border-primary dark:border-border-dark dark:bg-background-dark">
+                                    <span class="material-symbols-outlined text-primary">upload_file</span>
+                                    <span class="text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Click to upload or drag and drop</span>
+                                </label>
+                                <input id="imageUpload" type="file" class="hidden">
+                            </div>
+                            <button type="submit" class="mt-2 flex h-10 w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary text-sm font-bold text-white shadow-sm hover:bg-primary/90">
+                                <span class="truncate">Upload Item</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

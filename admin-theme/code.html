@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Restaurant Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#27AE60",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112111",
+              "content-light": "#ffffff",
+              "content-dark": "#1A2E1A",
+              "text-light-primary": "#112111",
+              "text-dark-primary": "#f6f8f6",
+              "text-light-secondary": "#4A5568",
+              "text-dark-secondary": "#A0AEC0",
+              "border-light": "#E2E8F0",
+              "border-dark": "#2D3748",
+              "accent": "#F5A623",
+              "success": "#27AE60",
+              "danger": "#E53E3E",
+            },
+            fontFamily: {
+              "display": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light-primary dark:text-dark-primary">
+<div class="flex h-screen">
+<!-- SideNavBar -->
+<aside class="flex h-full w-64 flex-col border-r border-border-light dark:border-border-dark bg-content-light dark:bg-content-dark p-4">
+<div class="flex items-center gap-3 p-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">restaurant_menu</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-lg font-bold text-text-light-primary dark:text-dark-primary">Gourmet Grove</h1>
+<p class="text-sm font-normal text-text-light-secondary dark:text-dark-secondary">Admin Panel</p>
+</div>
+</div>
+<nav class="mt-8 flex flex-1 flex-col justify-between">
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="orders.html">
+<span class="material-symbols-outlined text-2xl">receipt_long</span>
+<p class="text-sm font-medium">Orders</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="menu.html">
+<span class="material-symbols-outlined text-2xl">restaurant</span>
+<p class="text-sm font-medium">Menu</p>
+</a>
+
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-2xl">bar_chart</span>
+<p class="text-sm font-medium">Analytics</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-2xl">logout</span>
+<p class="text-sm font-medium">Log Out</p>
+</a>
+</div>
+</nav>
+</aside>
+<!-- Main Content -->
+<div class="flex flex-1 flex-col overflow-y-auto">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-border-light dark:border-border-dark bg-content-light/80 px-8 py-3 backdrop-blur-sm dark:bg-content-dark/80">
+<div class="flex items-center gap-8">
+<label class="relative flex h-10 w-full min-w-40 max-w-64 items-center">
+<span class="material-symbols-outlined absolute left-3 text-text-light-secondary dark:text-dark-secondary">search</span>
+<input class="form-input h-full w-full rounded-lg border-border-light bg-background-light pl-10 text-sm text-text-light-primary placeholder:text-text-light-secondary focus:border-primary focus:ring-1 focus:ring-primary dark:border-border-dark dark:bg-background-dark dark:text-dark-primary dark:placeholder:text-dark-secondary" placeholder="Search orders, customers..." value=""/>
+</label>
+</div>
+<div class="flex flex-1 items-center justify-end gap-6">
+<button class="relative flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-background-light text-text-light-secondary hover:bg-primary/10 dark:bg-background-dark dark:text-dark-secondary dark:hover:bg-primary/20">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute right-2.5 top-2.5 flex h-2.5 w-2.5 items-center justify-center rounded-full bg-accent text-xs text-white"></span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center bg-no-repeat" data-alt="Admin profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlhw9FDGZ6k30Lx1BFFqHzxtBoprn0EmEcOOEdcdB4Ads0S4Agah82ymPAvcGjFZOAtFV9SQcngoT4YAmxuZe0wEkKEMfm0mmVmb8yXheyfzmBmljmBoH9UqZAdgMrv-7sXVv0BqAOW2W7wchLn0nd6Uy97VDspaKz11YEVpl0Z5i3qLo5XJuRNTlYOViS0Q4LcNoaEIs-v-icGD1KSTDE7oF0YfUZpQl1Pa8zXEW9vmFc4-lqay8OkCDm2Aqa9O-sQArbvY52UVg");'></div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 p-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-3xl font-bold leading-tight tracking-tight text-text-light-primary dark:text-dark-primary">Welcome back, Admin!</h1>
+<p class="text-base font-normal text-text-light-secondary dark:text-dark-secondary">Here's what's happening with your restaurant today.</p>
+</div>
+<button class="flex h-10 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-5 text-sm font-bold text-white shadow-sm hover:bg-primary/90">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="truncate">Add New Order</span>
+</button>
+</div>
+<!-- Stats -->
+<div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-content-light p-5 dark:border-border-dark dark:bg-content-dark">
+<p class="text-base font-medium text-text-light-secondary dark:text-dark-secondary">Today's Sales</p>
+<p class="text-3xl font-bold tracking-tight text-text-light-primary dark:text-dark-primary">$1,250</p>
+<p class="text-sm font-medium text-success">+5.2% from yesterday</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-content-light p-5 dark:border-border-dark dark:bg-content-dark">
+<p class="text-base font-medium text-text-light-secondary dark:text-dark-secondary">New Orders</p>
+<p class="text-3xl font-bold tracking-tight text-text-light-primary dark:text-dark-primary">32</p>
+<p class="text-sm font-medium text-success">+10% from yesterday</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-content-light p-5 dark:border-border-dark dark:bg-content-dark">
+<p class="text-base font-medium text-text-light-secondary dark:text-dark-secondary">Pending Payments</p>
+<p class="text-3xl font-bold tracking-tight text-text-light-primary dark:text-dark-primary">4</p>
+<p class="text-sm font-medium text-danger">-2.1% from yesterday</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-content-light p-5 dark:border-border-dark dark:bg-content-dark">
+<p class="text-base font-medium text-text-light-secondary dark:text-dark-secondary">Total Customers</p>
+<p class="text-3xl font-bold tracking-tight text-text-light-primary dark:text-dark-primary">512</p>
+<p class="text-sm font-medium text-success">+1.5% this month</p>
+</div>
+</div>
+<!-- Charts -->
+<div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-content-light p-6 lg:col-span-2 dark:border-border-dark dark:bg-content-dark">
+<p class="text-lg font-semibold text-text-light-primary dark:text-dark-primary">Sales Overview</p>
+<div class="flex items-baseline gap-2">
+<p class="truncate text-4xl font-bold tracking-tight text-text-light-primary dark:text-dark-primary">$8,750</p>
+<p class="text-sm font-medium text-success">+12.5%</p>
+</div>
+<p class="text-sm font-normal text-text-light-secondary dark:text-dark-secondary">Last 7 Days</p>
+<div class="mt-4 flex h-64 flex-1 flex-col">
+<svg fill="none" height="100%" preserveaspectratio="none" viewbox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#paint0_linear_1131_5935)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#27AE60" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear_1131_5935" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#27AE60" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#27AE60" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-light bg-content-light p-6 dark:border-border-dark dark:bg-content-dark">
+<p class="text-lg font-semibold text-text-light-primary dark:text-dark-primary">Popular Dishes</p>
+<div class="flex items-baseline gap-2">
+<p class="truncate text-4xl font-bold tracking-tight text-text-light-primary dark:text-dark-primary">Top 5</p>
+<p class="text-sm font-medium text-success">+8%</p>
+</div>
+<p class="text-sm font-normal text-text-light-secondary dark:text-dark-secondary">This Week</p>
+<div class="mt-4 grid flex-1 auto-rows-fr grid-cols-[auto_1fr_auto] items-center gap-x-4 gap-y-4">
+<p class="text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Margherita Pizza</p>
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full rounded-full bg-primary" style="width: 90%;"></div></div>
+<p class="text-sm font-bold text-text-light-primary dark:text-dark-primary">90%</p>
+<p class="text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Grilled Salmon</p>
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full rounded-full bg-primary" style="width: 80%;"></div></div>
+<p class="text-sm font-bold text-text-light-primary dark:text-dark-primary">80%</p>
+<p class="text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Classic Burger</p>
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full rounded-full bg-primary" style="width: 70%;"></div></div>
+<p class="text-sm font-bold text-text-light-primary dark:text-dark-primary">70%</p>
+<p class="text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Spaghetti Carbonara</p>
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full rounded-full bg-primary" style="width: 70%;"></div></div>
+<p class="text-sm font-bold text-text-light-primary dark:text-dark-primary">70%</p>
+<p class="text-sm font-medium text-text-light-secondary dark:text-dark-secondary">Caesar Salad</p>
+<div class="h-2 flex-1 rounded-full bg-primary/20"><div class="h-full rounded-full bg-primary" style="width: 40%;"></div></div>
+<p class="text-sm font-bold text-text-light-primary dark:text-dark-primary">40%</p>
+</div>
+</div>
+</div>
+<!-- Recent Orders -->
+<div class="mt-6 flex flex-col gap-4 rounded-xl border border-border-light bg-content-light p-6 dark:border-border-dark dark:bg-content-dark">
+<h3 class="text-lg font-semibold text-text-light-primary dark:text-dark-primary">Recent Orders</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-border-light dark:border-border-dark">
+<th class="py-3 pr-4 text-sm font-semibold text-text-light-secondary dark:text-dark-secondary">Order ID</th>
+<th class="py-3 px-4 text-sm font-semibold text-text-light-secondary dark:text-dark-secondary">Customer</th>
+<th class="py-3 px-4 text-sm font-semibold text-text-light-secondary dark:text-dark-secondary">Total</th>
+<th class="py-3 px-4 text-sm font-semibold text-text-light-secondary dark:text-dark-secondary">Status</th>
+<th class="py-3 pl-4 text-sm font-semibold text-text-light-secondary dark:text-dark-secondary"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light last:border-0 dark:border-border-dark">
+<td class="py-4 pr-4 text-sm font-medium text-text-light-primary dark:text-dark-primary">#1024</td>
+<td class="px-4 py-4 text-sm text-text-light-secondary dark:text-dark-secondary">John Doe</td>
+<td class="px-4 py-4 text-sm text-text-light-secondary dark:text-dark-secondary">$45.50</td>
+<td class="px-4 py-4"><span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900 dark:text-green-300">Delivered</span></td>
+<td class="py-4 pl-4 text-right"><button class="text-sm font-medium text-primary hover:underline">View Details</button></td>
+</tr>
+<tr class="border-b border-border-light last:border-0 dark:border-border-dark">
+<td class="py-4 pr-4 text-sm font-medium text-text-light-primary dark:text-dark-primary">#1023</td>
+<td class="px-4 py-4 text-sm text-text-light-secondary dark:text-dark-secondary">Jane Smith</td>
+<td class="px-4 py-4 text-sm text-text-light-secondary dark:text-dark-secondary">$22.00</td>
+<td class="px-4 py-4"><span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">Preparing</span></td>
+<td class="py-4 pl-4 text-right"><button class="text-sm font-medium text-primary hover:underline">View Details</button></td>
+</tr>
+<tr class="border-b border-border-light last:border-0 dark:border-border-dark">
+<td class="py-4 pr-4 text-sm font-medium text-text-light-primary dark:text-dark-primary">#1022</td>
+<td class="px-4 py-4 text-sm text-text-light-secondary dark:text-dark-secondary">Sam Wilson</td>
+<td class="px-4 py-4 text-sm text-text-light-secondary dark:text-dark-secondary">$31.80</td>
+<td class="px-4 py-4"><span class="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">Ready for Pickup</span></td>
+<td class="py-4 pl-4 text-right"><button class="text-sm font-medium text-primary hover:underline">View Details</button></td>
+</tr>
+<tr class="border-b border-border-light last:border-0 dark:border-border-dark">
+<td class="py-4 pr-4 text-sm font-medium text-text-light-primary dark:text-dark-primary">#1021</td>
+<td class="px-4 py-4 text-sm text-text-light-secondary dark:text-dark-secondary">Mike Johnson</td>
+<td class="px-4 py-4 text-sm text-text-light-secondary dark:text-dark-secondary">$55.10</td>
+<td class="px-4 py-4"><span class="inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">Cancelled</span></td>
+<td class="py-4 pl-4 text-right"><button class="text-sm font-medium text-primary hover:underline">View Details</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

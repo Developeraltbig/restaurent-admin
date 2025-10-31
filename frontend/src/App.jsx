@@ -3,12 +3,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './components/Home'
 import Cart from './components/Cart'
+import Thanks from './components/Thanks';
 import AdminLayout from './admin/AdminLayout';
 import AdminHome from './admin/Home';
 import AdminLogin from './admin/Login';
 import Orders from './admin/Orders';
 import Menu from './admin/Menu';
 import QrCode from './admin/Qr';
+// import Q2 from './admin/Q2';
+
 // // Placeholder components for other admin pages
 // const AdminOrders = () => <div className="p-8"><h1>Orders Page</h1></div>;
 // const AdminMenu = () => <div className="p-8"><h1>Menu Page</h1></div>;
@@ -20,6 +23,7 @@ function App() {
         {/* Routes for your main user-facing application */}
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />}/>
+        <Route path="Thanks" element={<Thanks />}/>
         {/* ... other main app routes */}
 
         {/* --- Admin Panel Routes --- */}
@@ -33,7 +37,10 @@ function App() {
           <Route path="/admin/orders" element={<Orders />} />
           <Route path="/admin/menu" element={<Menu />} />
           <Route path="/admin/QrCode" element={<QrCode />}/>
+          {/* <Route path="/admin/Q2" element={<Q2 />} /> */}
+          
           {/* Add other nested admin routes here */}
+
         </Route>
       </Routes>
     </Router>

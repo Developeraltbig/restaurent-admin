@@ -45,7 +45,7 @@ const Navbar = () => {
          
         </div>
         <div className="flex flex-col gap-1">
-           <button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+           <button href="http://localhost:5173/" class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
             <span class="truncate">View Website</span>
           </button>
           <a href="#" className="flex items-center gap-3 rounded-lg px-3 py-2 text-text-light-secondary hover:bg-primary/10 dark:text-dark-secondary dark:hover:bg-primary/20">

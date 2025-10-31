@@ -10,7 +10,7 @@ const Login = () => {
               <span className="material-symbols-outlined text-4xl">restaurant_menu</span>
             </div>
             <h1 className="text-2xl font-bold">Admin Login</h1>
-            <p className="text-text-light-secondary dark:text-dark-secondary">Welcome back to Gourmet Grove</p>
+            <p className="text-text-light-secondary dark:text-dark-secondary">Welcome back to TCD Admin Panel</p>
           </div>
           <form className="mt-8 space-y-6">
             <div>
